@@ -1,23 +1,20 @@
 import logo from './logo.svg'
 import './App.css'
+import {Routes, Route, BrowserRouter} from 'react-router-dom'
+import Nav from './components/Nav'
+import ItemDetails from './components/ItemDetails'
 
 function App() {
     return (
         <div className='App'>
-            <header className='App-header'>
-                <img src={logo} className='App-logo' alt='logo' />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload your mom.
-                </p>
-                <a
-                    className='App-link'
-                    href='https://reactjs.org'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                >
-                    tesi is gay
-                </a>
-            </header>
+            <div className="container">
+                <Nav />
+                <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<ItemDetails />}/>
+                </Routes>
+                </BrowserRouter>
+            </div>
         </div>
     )
 }
