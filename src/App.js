@@ -7,8 +7,8 @@ import ItemDetails from './components/ItemDetails'
 function App() {
     return (
         <div className='App'>
+            <Nav />
             <div className="container">
-                <Nav />
                 <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<ItemDetails />}/>

@@ -2,8 +2,127 @@
     background-color: white;
     height: 90px;
     width: 100%;
+    border-bottom: 1px solid gray;
 }
 
 .navbar-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
 
+.navbar-link {
+    font-weight: 500;
+    font-family: "SuisseIntl-Regular",sans-serif;
+    font-size: 1rem;
+    padding: 8px;
+}
+
+.navbar-logo {
+    width: 15%;
+}
+
+.navbar-logo span {
+    line-height: 2em !important;
+    color: #006340;
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+input {
+    all: unset;
+  }
+
+.navbar-search {
+    height: 50%;
+    width: 50%;
+
+    border: 1px solid #A1A5A4;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.04);
+    padding: .5em;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+}
+
+.navbar-search input {
+    border: 0;
+    padding-left: 15px;
+    width: 100%;
+    font-size: 1em;
+}
+
+.navbar-links {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px !important;
+
+    width: auto;
+}
+
+.navbar-link button {
+    width: fit-content;
+    padding: 5px 15px;
+    font-weight: 600;
+
+}
+
+.login-button {
+
+    border: 1px solid #393939;
+    background-color: white;
+    color: #393939;
+
+    transition: background-color .3s ease;
+}
+
+.login-button:hover {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+
+    transition: background-color .3s ease;
+}
+
+.signup-button {
+    border: 1px solid #393939;
+    background-color: #393939;
+    color: white;
+
+    transition: background-color .3s ease;
+
+}
+
+.signup-button:hover {
+    border: 1px solid black;
+    background-color: black;
+
+    transition: background-color .3s ease;
+}
+
+@media screen and (max-width: 48em) {
+    .navbar-link {
+        font-size: .75rem;
+        padding: 8px 1px;
+    }
+
+    .navbar-links {
+        padding: 0 10px !important;
+    }
+
+    .navbar-search {
+        display: none;
+    }
+
+    .navbar-logo {
+        width: fit-content;
+    }
 }
