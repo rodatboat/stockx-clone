@@ -8,7 +8,7 @@ function App() {
     return (
         <div className='App'>
             <Nav />
-            <div className="container">
+            <div className="container page-content">
                 <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<ItemDetails />}/>

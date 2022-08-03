@@ -1,0 +1,42 @@
+.itemdetails-component {
+    height: fit-content;
+    height: 200vh;
+    width: 100%;
+    background: white;
+}
+
+.itemdetails-content {
+    height: inherit;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 35px 10px;
+}
+
+.itemdetails-trace {
+    display: flex;
+    flex-direction: row;
+    font-size: .75em;
+}
+
+.itemdetails-trace span {
+    margin: 0    .2rem;
+}
+
+.itemdetails-tab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.itemdetails-tab-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.itemdetails-tab-icons svg {
+    margin: 0 .4rem;
+}
