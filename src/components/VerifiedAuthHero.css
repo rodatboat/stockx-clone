@@ -1,0 +1,26 @@
+.verified-auth-hero img {
+    padding-top: .8em;
+    max-height: 360px;
+    
+}
+
+.verified-auth-hero{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.verified-auth-hero-title {
+    font-size: 2em;
+    font-weight: 600;
+
+    line-height: 1.2em;
+
+}
+
+.verified-auth-hero-subtitle {
+    font-size: 1.125em;
+    font-weight: 600;
+
+    line-height: 1em;
+}

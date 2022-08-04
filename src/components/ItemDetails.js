@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import { FaHeart, FaRegPlusSquare, FaSignOutAlt } from "react-icons/fa";
 import NavTrack from "./NavTrack";
 import SizePanel from "./SizePanel";
+import ProductSlider from "./ProductSlider";
+import ProductDetails from "./ProductDetails";
+import VerifiedAuthHero from "./VerifiedAuthHero";
 
 const ItemDetails = () => {
   const [shoe, setShoe] = useState(ShoeData[0].node);
@@ -65,6 +68,15 @@ const ItemDetails = () => {
               </div>
             </div>
           </div>
+          {/*  */}
+          <span className="sizepanel-divider"></span>
+          <ProductSlider sliderHeader={"Related Products"} />
+          {/*  */}
+          <span className="sizepanel-divider"></span>
+          <ProductDetails shoe={shoe} />
+          {/*  */}
+          <span className="sizepanel-divider"></span>
+          <VerifiedAuthHero />
         </div>
       </div>
     </>

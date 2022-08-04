@@ -1,0 +1,58 @@
+.product {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #CFCFCF;
+    border-radius: 3px;
+
+    min-width: 141px;
+    max-width: 168px;
+    align-items: center;
+}
+
+.product img {
+    object-fit: contain;
+
+    width: 140px;
+    height: 75px;
+    max-width: 100%;
+
+    margin: .5em;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    justify-content: space-evenly;
+
+    padding: .5em;
+    width: 100%;
+}
+
+.product-name {
+    word-wrap: break-word;
+
+    font-size: .875em;
+    height: 40px;
+}
+
+.product-lowest-ask {
+    font-size: .75em;
+    color: #5F5F5F;
+}
+
+.product-lowest-ask-price {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.product-last-sale {
+    font-size: .75em;
+    font-weight: 500;
+
+    background-color: #F4F3F1;
+    width: fit-content;
+    padding: .2em .4em;
+}

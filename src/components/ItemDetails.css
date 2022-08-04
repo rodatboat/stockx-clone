@@ -196,4 +196,8 @@
     .itemdetails-details {
         flex-direction: column;
     }
+
+    .itemdetails-tab {
+        display: none !important;
+    }
 }

@@ -1,0 +1,24 @@
+.slider-component {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-header {
+    text-align: left;
+    font-size: 1.25em;
+    font-weight: 600;
+
+    margin-bottom: 2em;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+    justify-content: space-between;
+
+    overflow-x:auto;
+
+    margin-bottom: .5em;
+}
