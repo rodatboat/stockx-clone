@@ -3,6 +3,7 @@ import ShoeData from "../db.json";
 import { useState, useEffect } from "react";
 import { FaHeart, FaRegPlusSquare, FaSignOutAlt } from "react-icons/fa";
 import NavTrack from "./NavTrack";
+import SizePanel from "./SizePanel";
 
 const ItemDetails = () => {
   const [shoe, setShoe] = useState(ShoeData[0].node);
@@ -45,20 +46,7 @@ const ItemDetails = () => {
                 </div>
               </div>
               {/*  */}
-              <div className="itemdetails-details-sizepanel">
-                <button className="sizes-button">
-                  <span>Size:</span>
-                  <span className="current-size">{"All"}</span>
-                </button>
-                <div className="bid-buy-buttons">
-                  <button className="bid-button">Place Bid</button>
-                  <button className="buy-button">{"Buy for " + "$109"}</button>
-                </div>
-                <span className="sizepanel-divider"></span>
-                <span className="sell-now">
-                  {"Sell for " + "$166" + " or Ask for More ->"}
-                </span>
-              </div>
+              <SizePanel shoe={shoe}/>
               {/*  */}
               <div className="itemdetails-lastsale">
                 <div className="lastsale">
