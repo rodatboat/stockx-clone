@@ -115,7 +115,7 @@ input {
     transition: background-color .3s ease;
 }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 50em) {
     .navbar-link {
         font-size: .75rem;
         padding: 8px 1px;

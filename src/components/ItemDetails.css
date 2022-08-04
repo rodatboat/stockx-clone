@@ -1,6 +1,6 @@
 .itemdetails-component {
     height: fit-content;
-    height: 200vh;
+    /* height: 200vh; */
     width: 100%;
     background: white;
 }
@@ -12,33 +12,6 @@
     flex-direction: column;
 
     padding: 35px 10px;
-}
-
-.itemdetails-trace {
-    display: flex;
-    flex-direction: row;
-    font-size: .75em;
-}
-
-.itemdetails-trace span {
-    margin: 0    .2rem;
-}
-
-.itemdetails-tab {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    justify-content: space-between;
-}
-
-.itemdetails-tab-icons {
-    display: flex;
-    flex-direction: row;
-}
-
-.itemdetails-tab-icons svg {
-    margin: 0 .4rem;
 }
 
 .itemdetails-title {
@@ -82,17 +55,33 @@
 .itemdetails-details {
     display: flex;
     flex-direction: row;
+    
+    /* height: 100%; */
 }
 
 .itemdetails-details-image {
-    flex: 1 1 58%;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 1 1 55%;
+}
+
+.itemdetails-details-image img {
+    width: 480px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .itemdetails-details-buy {
-    flex: 1 1 42%;
-
     display: flex;
     flex-direction: column;
+
+    flex: 1 1 45%;
+
+    /* justify-content: space-around; */
 }
 
 .itemdetails-details-recentsales {
@@ -105,6 +94,8 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+
+    margin-bottom: 1em;
 
     overflow: hidden;
 }
@@ -132,4 +123,171 @@
     top: -10px;
     height: auto;
 
+}
+
+.itemdetails-details-sizepanel {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #CFCFCF;
+    border-radius: .25em;
+
+    padding: 1em;
+}
+
+.sizes-button {
+    all: unset;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border: 1px solid #CFCFCF;
+    border-radius: .25em;
+    padding: 8px 12px;
+}
+.bid-buy-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+    font-size: 1em;
+    gap: 5px;
+    height: 3em;
+
+    margin: 1.2em 0 ;
+}
+
+.bid-button {
+    flex: 1 1 50%;
+
+    font-weight: 600;
+
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+
+    padding: .375em 1em;
+
+    transition: background-color .3s ease;
+}
+
+.bid-button:hover {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+
+    transition: background-color .3s ease;
+}
+
+.buy-button {
+    flex: 1 1 50%;
+
+    font-weight: 600;
+
+    border: 1px solid #006340;
+    background-color: #006340;
+    color: white;
+
+    padding: .375em 1em;
+
+    transition: background-color .3s ease;
+}
+
+.buy-button:hover {
+    border: 1px solid #adc9bf;
+    background-color: #adc9bf;
+    color: white;
+
+    transition: background-color .3s ease;
+}
+
+.current-size {
+    font-weight: 600;
+}
+
+.sizepanel-divider {
+    height: 1px;
+    background-color: #CFCFCF;
+    margin: 1.3em 0;
+}
+
+.sell-now {
+    font-weight: 600;
+    font-size: 1em;
+    color: #006340;
+}
+
+.itemdetails-lastsale {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-top: 1em;
+}
+
+.lastsale {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.lastsale-price {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.lastsale-change {
+    font-size: .875em;
+    font-weight: 600;
+
+    color: #006340;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.lastsale-options {
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+    align-items: center;
+
+}
+
+.lastsale-options button {
+    all: unset;
+
+    font-weight: 600;
+
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+
+    height: fit-content;
+    padding: .3em .5em;
+    font-size: .9em;
+
+    transition: background-color .3s ease;
+}
+
+.lastsale-options button:hover {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+
+    transition: background-color .3s ease;
+}
+
+
+
+@media screen and (max-width: 50em) {
+
+    .itemdetails-details {
+        flex-direction: column;
+    }
 }
