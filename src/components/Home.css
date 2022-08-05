@@ -1,0 +1,24 @@
+.home-component {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.home-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    background-color: #F4F3F1;
+}
+
+.home-nav-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.home-nav-links span {
+    font-size: 1.125em;
+    font-weight: 600;
+    padding: .8em .8em;
+}

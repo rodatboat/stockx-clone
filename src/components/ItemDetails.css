@@ -155,6 +155,9 @@
     justify-content: space-evenly;
 }
 
+.lastsale-change span {
+    padding-right: .3em;
+}
 
 .lastsale-options {
     display: flex;

@@ -1,6 +1,7 @@
 import "./ItemDetails.css";
 import ShoeData from "../db.json";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router";
 import { FaHeart, FaRegPlusSquare, FaSignOutAlt } from "react-icons/fa";
 import NavTrack from "./NavTrack";
 import SizePanel from "./SizePanel";
@@ -9,17 +10,30 @@ import ProductDetails from "./ProductDetails";
 import VerifiedAuthHero from "./VerifiedAuthHero";
 
 const ItemDetails = () => {
-  const [shoe, setShoe] = useState(ShoeData[0].node);
+  const [shoe, setShoe] = useState(null);
+  const { urlKey } = useParams()
 
-  // useEffect(() => {
-  //     setShoe(ShoeData[0].node)
+  const findProduct = (product_name) => {
+    if(shoe === null){
+      ShoeData.map((s, i) => {
+        if(product_name === s.node.urlKey){
+          return setShoe(s.node)
+        }
+      })
+    }
+  }
 
-  // }, [shoe])
+  useEffect(() => {
+    findProduct(urlKey);
+
+  }, [urlKey])
+
+  if (shoe !== null){
   return (
     <>
       <div className="itemdetails-component">
         <div className="itemdetails-content">
-        <NavTrack shoe={shoe} />
+        {/* <NavTrack shoe={shoe} /> */}
           {/*  */}
           <div className="itemdetails-title">
             <span className="itemdetails-title-model">{shoe.model}</span>
@@ -54,10 +68,10 @@ const ItemDetails = () => {
               <div className="itemdetails-lastsale">
                 <div className="lastsale">
                   <span>Last Sale:</span>
-                  <span className="lastsale-price">{"$142"}</span>
+                  <span className="lastsale-price">{"$" + shoe.market.salesInformation.lastSale}</span>
                   <div className="lastsale-change">
-                    <span className="lastsale-change-int">{"$14"}</span>
-                    <span className="lastsale-change-percent">({"11%"})</span>
+                    <span className="lastsale-change-int">{"$" + shoe.market.salesInformation.changeValue}</span>
+                    <span className="lastsale-change-percent">({shoe.market.salesInformation.changePercentage + "%"})</span>
                   </div>
                 </div>
                 <div className="lastsale-options">
@@ -80,7 +94,13 @@ const ItemDetails = () => {
         </div>
       </div>
     </>
-  );
+  );}
+  else {
+    return (
+      <>
+      </>
+    )
+  }
 };
 
 export default ItemDetails;
