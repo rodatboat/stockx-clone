@@ -1,13 +1,14 @@
 .verified-auth-hero img {
     padding-top: .8em;
     max-height: 360px;
-    
+    width: fit-content;
 }
 
 .verified-auth-hero{
     display: flex;
     flex-direction: column;
     text-align: center;
+    align-items: center;
 }
 
 .verified-auth-hero-title {
