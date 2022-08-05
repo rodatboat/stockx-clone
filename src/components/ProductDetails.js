@@ -9,6 +9,7 @@ const ProductDetails = ({ shoe }) => {
         <div className="product-details-all">
           <div className="product-details">
             <div className="product-style">
+              {/* Change the way this loads */}
               <span className="product-key">Style</span>
               <span className="product-value">{shoe.productTraits[0].value}</span>
             </div>

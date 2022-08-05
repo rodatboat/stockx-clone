@@ -8,15 +8,15 @@ import Home from './components/Home'
 function App() {
     return (
         <div className='App'>
+            <BrowserRouter>
             <Nav />
             <div className="container page-content">
-                <BrowserRouter>
                 <Routes>
                     <Route exact name="home" path="/" element={<Home />}/>
                     <Route name="product-page" path="/:urlKey" element={<ItemDetails />}/>
                 </Routes>
-                </BrowserRouter>
             </div>
+            </BrowserRouter>
         </div>
     )
 }

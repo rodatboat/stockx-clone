@@ -22,3 +22,7 @@
     font-weight: 600;
     padding: .8em .8em;
 }
+
+.home-ad {
+    height: fit-content;
+}

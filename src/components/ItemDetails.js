@@ -11,6 +11,8 @@ import VerifiedAuthHero from './VerifiedAuthHero'
 
 const ItemDetails = () => {
     const [shoe, setShoe] = useState(null)
+    const [relatedShoes, setRelatedShoes] = useState([])
+
     const { urlKey } = useParams()
 
     const findProduct = (product_name) => {
@@ -20,11 +22,35 @@ const ItemDetails = () => {
                     return setShoe(s.node)
                 }
             })
+        } else {
+            if(shoe.urlKey !== product_name){
+                ShoeData.map((s, i) => {
+                    if (product_name === s.node.urlKey) {
+                        return setShoe(s.node)
+                    }
+                })
+            }
+        }
+    }
+
+    // const checkUrlKey = () => {
+    //     urlKey  = useParams().urlKey
+    //     return false
+    // }
+
+    const fetchRelatedShoes = (data) => {
+        for(let j = 0; j < 5; j++){
+            const randomNum = Math.floor(Math.random() * ShoeData.length);
+            setRelatedShoes(c => [...c, data[randomNum]])
         }
     }
 
     useEffect(() => {
         findProduct(urlKey)
+
+        setRelatedShoes([])
+        fetchRelatedShoes(ShoeData)
+
     }, [urlKey])
 
     if (shoe !== null) {
@@ -32,7 +58,7 @@ const ItemDetails = () => {
             <>
                 <div className='itemdetails-component'>
                     <div className='itemdetails-content'>
-                        {/* <NavTrack shoe={shoe} /> */}
+                        <NavTrack shoe={shoe} />
                         {/*  */}
                         <div className='itemdetails-title'>
                             <span className='itemdetails-title-model'>
@@ -102,7 +128,7 @@ const ItemDetails = () => {
                         </div>
                         {/*  */}
                         <span className='sizepanel-divider'></span>
-                        <ProductSlider sliderHeader={'Related Products'} />
+                        <ProductSlider key={Math.random()} sliderHeader={'Related Products'} relatedShoes={relatedShoes} />
                         {/*  */}
                         <span className='sizepanel-divider'></span>
                         <ProductDetails shoe={shoe} />

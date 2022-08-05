@@ -5,9 +5,8 @@ const ProductSlide = ({ shoe }) => {
     return (
         <>
             <Link
-                to={'/' + shoe.urlKey}
-                onClick={() => (window.location.href = '/' + shoe.urlKey)}
-                params={{ urlKey: shoe.urlKey }}
+                to={"/"+ shoe.urlKey}
+                
             >
                 <div className='product'>
                     <img src={shoe.media.thumbUrl} />

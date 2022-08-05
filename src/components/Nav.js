@@ -1,5 +1,6 @@
 import "./Nav.css";
 import { FaRegBell, FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -7,7 +8,9 @@ const Nav = () => {
       <nav className="navbar-component">
         <div className="navbar-content">
           <div className="navbar-logo">
+            <Link to="/">
             <span>StockX</span>
+            </Link>
           </div>
           <div className="navbar-search">
             <FaSearch />

@@ -1,5 +1,6 @@
 import './Home.css'
 import ProductSlider from './ProductSlider'
+import ShoeData from '../db.json'
 
 const Home = () => {
     return (
@@ -17,9 +18,11 @@ const Home = () => {
                             <span>NFTs</span>
                         </div>
                     </div>
-                    <div className='home-ad'></div>
+                    <div className='home-ad'>
+                        {/* Home ad */}
+                    </div>
                     <div className='home-slider'>
-                        <ProductSlider sliderHeader={'Trending Sneakers'} />
+                        <ProductSlider sliderHeader={'Trending Sneakers'} relatedShoes={ShoeData} />
                     </div>
                 </div>
             </div>
