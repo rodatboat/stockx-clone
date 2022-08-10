@@ -1,0 +1,27 @@
+.brand-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    overflow-x: auto;
+    flex-wrap:nowrap;
+    gap: 10px;
+
+    height: 1.5em
+}
+
+.brand-list img {
+    height:auto;
+}
+
+.slider-header {
+    text-align: left;
+    align-items: left;
+}
+
+.brandslider-component {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+}

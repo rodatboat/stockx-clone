@@ -23,5 +23,13 @@
     padding: .8em .8em;
 }
 
-.home-ad {
+.home-landing-img {
+    width: 100%;
+    height: auto;
+
+    margin: 1em 0;
+}
+
+.home-slider {
+    margin: 1em 0;
 }
