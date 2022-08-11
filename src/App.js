@@ -4,6 +4,7 @@ import {Routes, Route, BrowserRouter} from 'react-router-dom'
 import Nav from './components/Nav'
 import ItemDetails from './components/ItemDetails'
 import Home from './components/Home'
+import Footer from './components/Footer'
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     <Route name="product-page" path="/:urlKey" element={<ItemDetails />}/>
                 </Routes>
             </div>
+            <Footer />
             </BrowserRouter>
         </div>
     )

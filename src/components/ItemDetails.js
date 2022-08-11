@@ -39,7 +39,7 @@ const ItemDetails = () => {
     // }
 
     const fetchRelatedShoes = (data) => {
-        for(let j = 0; j < 5; j++){
+        for(let j = 0; j < 10; j++){
             const randomNum = Math.floor(Math.random() * ShoeData.length);
             setRelatedShoes(c => [...c, data[randomNum]])
         }

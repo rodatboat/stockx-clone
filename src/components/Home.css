@@ -33,3 +33,33 @@
 .home-slider {
     margin: 1em 0;
 }
+
+.home-two-ad {
+    display: flex;
+    flex-direction: row;
+
+    overflow-x:    auto;
+
+    gap: 20px;
+
+    max-height: min-content;
+}
+
+.home-two-ad-big {
+    flex: 1 1 66%;
+    overflow:  hidden;
+}
+
+.home-two-ad-big img {
+    height: 100% !important;
+}
+
+.home-two-ad-small {
+    flex: 1 1 33%;
+    overflow:  hidden;
+}
+
+.home-two-ad img {
+    height: auto;
+    max-width: 100%;
+}

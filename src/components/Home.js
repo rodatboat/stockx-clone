@@ -46,6 +46,27 @@ const Home = () => {
                     <div className='home-slider'>
                         {sliderShoes.length > 0 ? <ProductSlider sliderHeader={'Recently Viewed'} relatedShoes={sliderShoes} /> : false}
                     </div>
+
+                    <div className='home-slider'>
+                        {sliderShoes.length > 0 ? <ProductSlider sliderHeader={'Featured Apparel'} relatedShoes={sliderShoes} /> : false}
+                    </div>
+
+                    <div className='home-two-ad'>
+                    <div className='home-two-ad-big'>
+                        <img src="https://images.contentstack.io/v3/assets/blt818b0c67cf450811/blt635a643a592ee719/62f17a11f0bc6d1158224306/Bearbrick_Assets_SecondaryA_(1).jpg" />
+                    </div>
+                    <div className='home-two-ad-small'>
+                    <img src="https://images.contentstack.io/v3/assets/blt818b0c67cf450811/blt05a05b38c866dfa1/62f177c318595876bf317714/Stand-Out-BTS_SecondaryB-EN.png" />
+                    </div>
+                    </div>
+
+                    <div className='home-slider'>
+                        {sliderShoes.length > 0 ? <ProductSlider sliderHeader={'Electronics Spotlight'} relatedShoes={sliderShoes} /> : false}
+                    </div>
+
+                    <div className='home-slider'>
+                        {sliderShoes.length > 0 ? <ProductSlider sliderHeader={'Featured Trading Cards'} relatedShoes={sliderShoes} /> : false}
+                    </div>
                 </div>
             </div>
         </>

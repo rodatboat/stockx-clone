@@ -6,6 +6,7 @@
     border-bottom: 1px solid gray;
 
     overflow: hidden;
+    z-index: 999;
 }
 
 .navbar-content {
