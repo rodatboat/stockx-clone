@@ -9,7 +9,7 @@ const ProductSlider = ({sliderHeader, relatedShoes})=> {
 
     useEffect(()=>{
         setShoes(relatedShoes)
-    }, [])
+    }, [relatedShoes])
 
     if(shoes){
     return (
