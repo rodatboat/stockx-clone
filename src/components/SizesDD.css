@@ -1,5 +1,13 @@
+.dropdown-component {
+    width: 100%;
+    border: 1px solid #CFCFCF;
+    border-top: 0;
+    border-radius: .2em;
+}
+
 .dropdown-wrapper {
     width: 100%;
+    padding: .5em;
 }
 
 .dropdown-sizechart {
@@ -8,12 +16,13 @@
     justify-content: space-between;
 
     margin: .3em;
+    font-weight: 500;
 }
 
 .dropdown-component button {
     all:unset;
 
-    border: 1px solid black;
+    border: 1px solid #CFCFCF;
     border-radius: .15em;
 
     display: flex;
@@ -22,6 +31,15 @@
     font-size: .875em;
 
     margin: .2em;
+    padding: .2em;
+
+    transition: all .2s ease;
+}
+
+.dropdown-component button:hover {
+    border-color: #006340;
+
+    transition: all .2s ease;
 }
 
 .dropdown-all {
@@ -43,4 +61,17 @@
 
 .dropdown-sizes button {
     flex: 1 1 30%;
+}
+
+.size-chart {
+    color: #006340;
+}
+
+.dropdown-sizes span, .dropdown-all span {
+    color:#006340;
+}
+
+.shoe-size-title {
+    color: black !important;
+    font-weight: 500;
 }
