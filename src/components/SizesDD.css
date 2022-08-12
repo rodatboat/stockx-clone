@@ -1,0 +1,46 @@
+.dropdown-wrapper {
+    width: 100%;
+}
+
+.dropdown-sizechart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: .3em;
+}
+
+.dropdown-component button {
+    all:unset;
+
+    border: 1px solid black;
+    border-radius: .15em;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: .875em;
+
+    margin: .2em;
+}
+
+.dropdown-all {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-all button {
+    width: 100%;
+}
+
+.dropdown-sizes {
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+}
+
+.dropdown-sizes button {
+    flex: 1 1 30%;
+}

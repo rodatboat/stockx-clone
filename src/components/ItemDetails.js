@@ -103,7 +103,8 @@ const ItemDetails = () => {
                                                 shoe.market.salesInformation
                                                     .lastSale}
                                         </span>
-                                        <div className='lastsale-change'>
+                                        <div className='lastsale-change' style={{color: (shoe.market.salesInformation
+                                                        .changeValue >= 0 ? "#006340" : "#C53030")}}>
                                             <span className='lastsale-change-int'>
                                                 {'$' +
                                                     shoe.market.salesInformation

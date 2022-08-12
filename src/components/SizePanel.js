@@ -1,5 +1,5 @@
 import './SizePanel.css'
-
+import SizesDD from './SizesDD'
 const SizePanel = ({shoe}) => {
     return (
         <>
@@ -8,6 +8,7 @@ const SizePanel = ({shoe}) => {
                   <span>Size:</span>
                   <span className="current-size">{"All"}</span>
                 </button>
+                <SizesDD />
                 <div className="bid-buy-buttons">
                   <button className="bid-button">Place Bid</button>
                   <button className="buy-button">{"Buy for $" + shoe.market.bidAskData.lowestAsk}</button>
